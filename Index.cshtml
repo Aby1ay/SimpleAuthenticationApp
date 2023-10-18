@@ -1,0 +1,22 @@
+<!-- Views/Home/Index.cshtml -->
+<div class="text-center">
+    <h1 class="display-4">Простая аутентификация</h1>
+    <form method="post">
+        <label for="username">Введите логин:</label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <label for="password">Введите пароль:</label>
+        <input type="password" id="password" name="password" />
+        <br />
+        <button type="submit">Проверить пароль</button>
+        <button type="submit" name="action" value="Delete">Удалить символ</button>
+        <button type="submit" name="action" value="ChangeReference">Изменить эталонный пароль</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.UserDetails))
+    {
+        <div>
+            <p>@ViewBag.UserDetails</p>
+        </div>
+    }
+</div>
